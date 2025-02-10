@@ -1,19 +1,19 @@
 {
-  "name": "test-ci-pnpm",
+  "name": "test-ci-yarn",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@10.2.1",
+  "packageManager": "yarn@4.6.0",
   "engines": {
-    "node": ">=20",
-    "pnpm": ">=10"
+    "node": ">=23",
+    "yarn": ">=4"
   },
   "devEngines": {
     "packageManager": {
-      "name": "pnpm",
-      "version": "10.2.1"
+      "name": "yarn",
+      "version": "4.6.0"
     }
   },
   "scripts": {
-    "test": "node --experimental-test-coverage --test test.js"
+    "test": "node --experimental-test-coverage --test-coverage-exclude '.pnp.*' --test test.js"
   }
 }
